@@ -1,0 +1,18 @@
+---
+import { Button } from '@/components/ui/button'
+
+interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<html lang="en">
+  <head>
+    <title>Astro</title>
+  </head>
+  <body>
+    <Button variant="outline">Hello World</Button>
+  </body>
+</html>
