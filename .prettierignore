@@ -1,0 +1,10 @@
+dist/
+node_modules/
+.netlify/
+.astro/
+pnpm-lock.yaml
+dist/
+node_modules/
+.netlify/
+.astro/
+pnpm-lock.yaml
