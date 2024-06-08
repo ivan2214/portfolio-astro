@@ -6,9 +6,5 @@
     "typescript", // Enable .ts
     "typescriptreact" // Enable .tsx
   ],
-  "conventionalCommits.scopes": [
-    "astro.config.mjs",
-    "astro.config.mjs",
-    "src"
-  ]
+  "conventionalCommits.scopes": ["astro.config.mjs", "src"]
 }
