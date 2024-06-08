@@ -1,0 +1,14 @@
+---
+import Card from '@components/Card.astro'
+import TimeZoneV2 from '@components/sections/TimeZoneCardV2'
+
+const getCurrentTimeZone = () => {
+  return Intl.DateTimeFormat().resolvedOptions().timeZone
+}
+
+const currentTimeZone = getCurrentTimeZone()
+---
+
+<Card colSpan="lg:col-span-2" rowSpan="md:row-span-1" title="Time zone">
+  <TimeZoneV2 timezone={currentTimeZone} client:load />
+</Card>

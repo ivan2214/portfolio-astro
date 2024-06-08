@@ -1,0 +1,49 @@
+---
+import Card from '@components/Card.astro'
+import { Button } from '@ui/button'
+import { NETWORKS } from '@lib/constants'
+import { Icon } from '@components/icons/icon'
+---
+
+<Card colSpan="md:col-span-3" rowSpan="md:row-span-4">
+  <div class="flex h-full w-full">
+    <div class="flex flex-col justify-between gap-4 md:max-h-[300px]">
+      <div class="flex h-full flex-col">
+        <h6 class="m-0 text-sm font-light text-gray-500">Bienvenido</h6>
+        <p class="m-0 text-xl font-light">
+          Hola, soy <b class="font-bold">Iván Bongiovanni</b>, desarrollador de
+          software y mirador serial de series con fuerte enfoque en la
+          experiencia del usuario, animaciones y micro interacciones. Me encanta
+          crear interfaces hermosas y funcionales, me apasiona la tecnología y
+          siempre estoy buscando nuevos desafíos.
+        </p>
+      </div>
+      <div class="flex gap-4">
+        {
+          NETWORKS.map((network) => (
+            <a
+              href={network.link}
+              aria-label={`${network.network === 'gmail' ? 'Enviar' : 'Ir a'} ${network.network}`}
+              target="_blank"
+            >
+              <Button
+                title={`${network.network === 'gmail' ? 'Enviar' : 'Ir a'} ${network.network}`}
+                variant="outline"
+              >
+                <Icon className="h-5 w-5" name={network.network} />
+                <span class="sr-only">Perfil de {network.network}</span>
+              </Button>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+    <img
+      width="300"
+      height="300"
+      src="/waving.png"
+      class="pointer-events-none absolute bottom-[-20px] right-[-110px] z-[-1] max-h-[300px] w-auto select-none opacity-50 md:relative md:bottom-auto md:right-auto md:z-auto md:opacity-100"
+      alt="memoji of Ivan Bongiovanni"
+    />
+  </div>
+</Card>

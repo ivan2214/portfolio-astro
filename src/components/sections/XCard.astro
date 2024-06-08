@@ -1,0 +1,28 @@
+---
+import Card from '@components/Card.astro'
+import { NETWORKS } from '@lib/constants'
+---
+
+<Card
+  colSpan="md:col-span-1"
+  rowSpan="md:row-span-2"
+  title="X Profile"
+  href={NETWORKS.x}
+>
+  <div class="flex h-full w-full flex-col">
+    <div>
+      <img
+        width="50"
+        height="50"
+        src="/surprised-phone.png"
+        class="pointer-events-none absolute bottom-[-20px] right-[-110px] z-[-1] max-h-[300px] w-auto select-none opacity-50 md:relative md:bottom-auto md:right-auto md:z-auto md:opacity-100"
+        alt="Bitmoji of Ivan Bongiovanni with a phone"
+      />
+    </div>
+    <div>
+      <p class="mt-2 text-sm text-muted-foreground">
+        If you want to see my tweets, you can follow me on X.
+      </p>
+    </div>
+  </div>
+</Card>

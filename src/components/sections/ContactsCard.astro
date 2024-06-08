@@ -1,0 +1,43 @@
+---
+import Card from '@components/Card.astro'
+import { NETWORKS } from '@lib/constants'
+import { Button } from '@ui/button'
+import { Icon } from '@/components/icons/icon'
+import { Twitter } from 'lucide-react'
+---
+
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-4">
+  <div class="h-full">
+    <header class="flex items-center">
+      <h1 class="text-xl font-bold text-foreground">
+        ¡Empecemos a trabajar juntos!
+      </h1>
+    </header>
+    <address class="mt-4 flex flex-col">
+      <h2 class="text-gray-500">Detalles de contacto</h2>
+      <p>bongiovanniivan12@gmail.com</p>
+    </address>
+    <div class="mt-4 flex w-fit flex-col gap-y-2">
+      <h2 class="text-gray-500">Socials</h2>
+      <ul>
+        {
+          NETWORKS.map((network) => (
+            <a
+              href={network.link}
+              aria-label={`${network.network === 'gmail' ? 'Enviar' : 'Ir a'} ${network.network}`}
+              target="_blank"
+            >
+              <Button
+                title={`${network.network === 'gmail' ? 'Enviar' : 'Ir a'} ${network.network}`}
+                variant="outline"
+              >
+                <Icon className="h-5 w-5" name={network.network} />
+                <span class="sr-only">Perfil de {network.network}</span>
+              </Button>
+            </a>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</Card>
