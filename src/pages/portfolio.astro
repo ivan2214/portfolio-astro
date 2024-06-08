@@ -1,30 +1,9 @@
 ---
-import { WORK } from '../lib/constants'
+import { PROJECTS, PROJECTSTEXTS } from '../lib/constants'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import TopLayout from '../layouts/TopLayout.astro'
 import BottomLayout from '../layouts/BottomLayout.astro'
 import ProjectCard from '../components/ProjectCard.astro'
-
-interface Project {
-  contentTypeId: 'Projects'
-  fields: {
-    name: string
-    img: {
-      fields: {
-        file: {
-          url: string
-        }
-        title: string
-      }
-    }
-    website: string
-    repositorio: string
-  }
-}
-
-const entries = {
-  items: [],
-}
 ---
 
 <BaseLayout
@@ -33,23 +12,22 @@ const entries = {
 >
   <main class="flex min-h-[80vh] flex-auto flex-col" transition:animate="slide">
     <TopLayout>
-      <h2
-        class="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0"
-      >
-        Proyectos y clones
+      <h2 class="scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0">
+        {PROJECTSTEXTS.TITLE}
       </h2>
+      <p
+        class="mt-2 border-b pb-2 text-sm font-light tracking-tight text-muted-foreground"
+      >
+        {PROJECTSTEXTS.DESCRIPTION}
+      </p>
     </TopLayout>
     <BottomLayout>
       <div class="flex w-full flex-wrap justify-center gap-2">
         {
-          entries.items.map((entry: any) => (
+          PROJECTS.map((project: any) => (
             <ProjectCard
-              key={entry?.sys?.id}
-              href={entry?.fields?.website}
-              heading={entry?.fields?.name}
-              subheading={entry?.fields?.description}
-              imagePath={entry?.fields?.img?.fields?.file.url}
-              altText={entry?.fields?.img?.fields.title}
+              key={project?.id}
+              {...project}
               class="w-full sm:w-2/5"
             />
           ))

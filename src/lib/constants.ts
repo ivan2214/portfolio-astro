@@ -1,4 +1,4 @@
-import type { Site, Page, Study, Experience, Networks } from './types'
+import type { Site, Page, Study, Experience, Networks, Project } from './types'
 
 export const loaderAnimation = [
   '.loader',
@@ -6,6 +6,7 @@ export const loaderAnimation = [
   { easing: 'ease-out' },
 ]
 
+// Networks
 export const NETWORKS: Networks = [
   {
     network: 'github',
@@ -50,18 +51,37 @@ export const BLOG: Page = {
 }
 
 // Projects Page
-export const PROJECTS: Page = {
+export const PROJECTSTEXTS: Page = {
   TITLE: 'Proyectos',
   DESCRIPTION: 'Proyectos recientes en los que he trabajado.',
 }
 
-// Search Page
+export const PROJECTS: Project[] = [
+  {
+    altText: 'Portfolio',
+    heading: 'Portfolio',
+    imagePath: '/images/portfolio.png',
+    subheading: 'Personal portfolio',
+    tags: ['React', 'Tailwind', 'Astro'],
+    hrefRepo: 'https://github.com/ivan2214/portfolio-astro',
+  },
+  {
+    altText: 'Portfolio',
+    heading: 'Portfolio',
+    imagePath: '/images/portfolio.png',
+    subheading: 'Personal portfolio',
+    tags: ['React', 'Tailwind', 'Astro'],
+    hrefRepo: 'https://github.com/ivan2214/portfolio-astro',
+  },
+]
+
+// Search 
 export const SEARCH: Page = {
   TITLE: 'Buscar',
   DESCRIPTION: 'Busque todas las publicaciones y proyectos por palabra clave.',
 }
 
-// Study Page
+// Study
 export const STUDIES: Study[] = [
   {
     title: 'Programador Universitario',
@@ -90,6 +110,7 @@ export const STUDIES: Study[] = [
   },
 ]
 
+// Experience
 export const EXPERIENCE: Experience[] = [
   {
     company: 'Tensolite',
@@ -123,7 +144,7 @@ export const EXPERIENCE: Experience[] = [
       'Testing and debugging',
     ],
   },
-  {
+ /*  {
     company: 'Imaginamos',
     link: 'https://imaginamos.com/',
     location: 'Bogotá D C, Colombia',
@@ -171,5 +192,5 @@ export const EXPERIENCE: Experience[] = [
       'Creation of the Bookii page in Spanish and change of texts in cms',
       'Generation of static posts using Gatsby and the Contentful cms for the Bookii blog',
     ],
-  },
+  }, */
 ]

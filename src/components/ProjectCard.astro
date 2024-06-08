@@ -1,31 +1,53 @@
 ---
 import { Image } from 'astro:assets'
 import { Card as ShadcnCard } from './ui/card'
+import type { Project } from '@/lib/types'
+import type { HtmlHTMLAttributes } from 'react'
+
+interface Props extends Project {
+  as?: any
+  class?: HtmlHTMLAttributes<HTMLDivElement>['className']
+}
 
 const {
   as: Tag = 'a',
   class: className,
-  href,
+  hrefRepo,
+  hrefWeb,
+  tags,
   heading,
   subheading,
   imagePath,
   altText,
-} = Astro.props
+}: Props = Astro.props
+
+const href = hrefRepo || hrefWeb
 ---
 
-<Tag href={href} class={`${className}`} `>
+<Tag href={href} class={`${className}`} ` target="_blank">
   <ShadcnCard
     className={`transfor-y-[-40%] align-start perspective-1200 group relative flex-none transform justify-start overflow-hidden shadow-lg transition duration-75 ease-in-out ${href ? 'cursor-pointer hover:border-primary' : ''} `}
   >
     <Image
       src={imagePath}
       alt={altText}
+      width={500}
+      height={300}
       class="h-48 w-full rounded-2xl rounded-bl-none rounded-br-none object-cover"
       loading="lazy"
     />
     <div class="flex flex-col gap-y-0.5 px-5 py-4">
       <h1 class="text-lg font-medium">{heading}</h1>
       <h2 class="text-muted-foreground">{subheading}</h2>
+      <div class="flex flex-wrap gap-2">
+        {
+          tags?.map((tag) => (
+            <span class="inline-flex items-center rounded-full bg-primary px-3 py-0.5 text-xs font-medium text-white">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
     </div>
 
     <slot />
