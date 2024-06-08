@@ -41,7 +41,9 @@ import { Image } from 'astro:assets'
     </div>
     <Image
       src="/waving.png"
-      inferSize
+      width="300"
+      height="300"
+      loading="lazy"
       class="pointer-events-none absolute bottom-[-20px] right-[-110px] z-[-1] max-h-[300px] w-auto select-none opacity-50 md:relative md:bottom-auto md:right-auto md:z-auto md:opacity-100"
       alt="memoji of Ivan Bongiovanni"
     />

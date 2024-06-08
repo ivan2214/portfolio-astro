@@ -8,6 +8,7 @@
   ],
   "conventionalCommits.scopes": [
     "astro.config.mjs",
-    "astro.config.mjs"
+    "astro.config.mjs",
+    "src"
   ]
 }
