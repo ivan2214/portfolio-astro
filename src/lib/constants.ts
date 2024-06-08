@@ -1,10 +1,19 @@
-import type { Site, Page, Experience, Study, Networks } from '@lib/types'
+import type { Site, Page, Study, Experience, Networks } from './types'
 
 export const loaderAnimation = [
   '.loader',
   { opacity: [1, 0], pointerEvents: 'none' },
   { easing: 'ease-out' },
 ]
+
+export const LINKS = {
+  github: 'https://github.com/bue221',
+  linkedin: 'https://www.linkedin.com/in/bue221/',
+  mail: 'mailto:camiloplaza3@gmail.com',
+  instagram: 'https://www.instagram.com/ancap.tattoo/',
+  medium: 'https://ladvace.medium.com/',
+  discord: 'https://discordapp.com/users/163300027618295808',
+}
 
 export const NETWORKS: Networks = [
   {

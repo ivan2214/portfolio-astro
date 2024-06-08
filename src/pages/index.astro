@@ -1,45 +1,21 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro'
-import IntroCard from '@components/sections/IntroCard.astro'
-import AboutMe from '@components/sections/AboutMe.astro'
-import Card from '@components/Card.astro'
-import TimeZoneCard from '@components/sections/TimeZoneCard.astro'
-import ContactsCard from '@components/sections/ContactsCard.astro'
-import Now from '@components/sections/Now.astro'
-import CVCard from '@components/sections/CVCard.astro'
-import ExperienceCard from '@components/sections/ExperienceCard.astro'
-import XCard from '@components/sections/XCard.astro'
-import StudyCard from '@components/sections/StudyCard.astro'
-
+import BaseLayout from '../layouts/BaseLayout.astro'
+import IntroCard from '../components/sections/IntroCard.astro'
+import AboutMe from '../components/sections/AboutMe.astro'
+import Card from '../components/Card.astro'
+import TimeZoneCard from '../components/sections/TimeZoneCard.astro'
+import ContactsCard from '../components/sections/ContactsCard.astro'
+import Now from '../components/sections/Now.astro'
+import CVCard from '../components/sections/CVCard.astro'
+import ExperienceCard from '../components/sections/ExperienceCard.astro'
+import StudyCard from '../components/sections/StudyCard.astro'
+import XCard from '@/components/sections/XCard.astro'
 //
 ---
 
-<script>
-  import { stagger, spring, timeline, type TimelineDefinition } from 'motion'
-  import { loaderAnimation } from '../lib/constants'
-
-  const cards = document.querySelectorAll('.card-animate')
-
-  const sequence = [
-    loaderAnimation,
-    [
-      cards,
-      { y: ['40%', '0%'], opacity: [0, 1] },
-      {
-        at: '-0.1',
-        duration: 0.4,
-        delay: stagger(0.3),
-        easing: spring({ velocity: 100, stiffness: 50, damping: 10 }),
-      },
-    ],
-  ]
-
-  timeline(sequence as TimelineDefinition)
-</script>
-
 <BaseLayout
-  title="Iván Bongiovanni - Full Stack Developer"
-  description="Iván Bongiovanni - Full Stack Developer - Portfolio, Projects, CV, About Me, Contact, Timezone, Now, Experience, X, Study, Twitter, Github, Linkedin, Email, Discord"
+  title="Andrés Plaza - Full Stack Developer"
+  description="Andrés Plaza - Full Stack Developer - Portfolio, Projects, CV, About Me, Contact, Timezone, Now, Experience, Tattoo, Study"
 >
   <div
     slot="loader"
@@ -58,15 +34,7 @@ import StudyCard from '@components/sections/StudyCard.astro'
       rowSpan="md:row-span-2"
       title="Portafolio & Proyectos"
       href="/portfolio"
-    >
-      <img
-        width="50"
-        height="50"
-        src="/going-to-work-happy.png"
-        class="pointer-events-none absolute bottom-[-20px] right-[-110px] z-[-1] max-h-[300px] w-auto select-none opacity-50 md:relative md:bottom-auto md:right-auto md:z-auto md:opacity-100"
-        alt="Bitmoji of Ivan Bongiovanni with a portfolio"
-      />
-    </Card>
+    />
     <TimeZoneCard />
     <ContactsCard />
     <ExperienceCard />
@@ -80,14 +48,14 @@ import StudyCard from '@components/sections/StudyCard.astro'
     </Card>
     <XCard />
     <StudyCard />
-    <Card>
+    <!-- <Card colSpan="md:col-span-1" rowSpan="md:row-span-1">
       <p class="text-xs">
-        © 2023 · Elaborado con ♥️ usando <a
+        © 2023 · Crafted with ♥️ using <a
           href="https://astro.build/"
           target="_blank"
           class="text-red-500">Astro</a
-        > by Ivan Bongiovanni.
+        > by Gianmarco.
       </p>
-    </Card>
+    </Card> -->
   </main>
 </BaseLayout>

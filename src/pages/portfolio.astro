@@ -1,51 +1,29 @@
 ---
-import { WORK } from '@lib/constants'
-import BaseLayout from '@layouts/BaseLayout.astro'
-import TopLayout from '@layouts/TopLayout.astro'
-import BottomLayout from '@layouts/BottomLayout.astro'
-import ProjectCard from '@components/ProjectCard.astro'
-
-
-type ImageType = {
-  fields: {
-    file: {
-      url: string
-    }
-    title: string
-  }
-}
+import { WORK } from '../lib/constants'
+import BaseLayout from '../layouts/BaseLayout.astro'
+import TopLayout from '../layouts/TopLayout.astro'
+import BottomLayout from '../layouts/BottomLayout.astro'
+import ProjectCard from '../components/ProjectCard.astro'
 
 interface Project {
-  sys: {
-    id: string
-  }
+  contentTypeId: 'Projects'
   fields: {
     name: string
-    img: ImageType
+    img: {
+      fields: {
+        file: {
+          url: string
+        }
+        title: string
+      }
+    }
     website: string
     repositorio: string
   }
 }
 
-const entries: { items: Project[] } = {
-  items:[{
-    sys: {
-      id: '1'
-    },
-    fields: {
-      name: 'Portfolio',
-      img: {
-        fields: {
-          file: {
-            url: 'View1.png'
-          },
-          title: 'Portfolio'
-        }
-      },
-      website: "https://github.com/ivan2214/portfolio",
-      repositorio: "#"
-    }
-  }]
+const entries ={
+  items: []
 }
 ---
 
