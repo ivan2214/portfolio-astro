@@ -4,10 +4,7 @@ import tailwind from '@astrojs/tailwind'
 
 // https://astro.build/config
 export default defineConfig({
-  site:
-    process.env.NODE_ENV === 'production'
-      ? 'https://ivanbong.vercel.app'
-      : 'http://localhost:3000',
+  site: 'https://ivanbong.vercel.app',
   integrations: [
     react(),
     tailwind({
