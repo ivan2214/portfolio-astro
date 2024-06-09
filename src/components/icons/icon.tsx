@@ -49,7 +49,7 @@ export const Icons: Record<
   internet: PepiconsPencilInternet,
 }
 
-type IconName =
+export type IconName =
   | 'javascript'
   | 'typescript'
   | 'react'
