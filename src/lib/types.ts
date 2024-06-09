@@ -1,3 +1,5 @@
+import type { IconName } from "@/components/icons/icon"
+
 export type Page = {
   TITLE: string
   DESCRIPTION: string
@@ -33,16 +35,18 @@ export type Experience = {
 }
 
 export type Networks = {
-  network: string
+  network: IconName
   link: string
 }[]
 
 export interface Project {
+  id: number
   hrefWeb?:  string
   hrefRepo?: string
-  imagePath: string
-  altText: string
+  image: string
+  alt: string
   heading: string
-  subheading?: string
+  type?: string
   tags?: string[]
+  description?: string
 }

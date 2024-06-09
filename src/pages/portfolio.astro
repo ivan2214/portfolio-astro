@@ -10,7 +10,7 @@ import ProjectCard from '../components/ProjectCard.astro'
   title="Portfolio"
   description="Projects and some clone's that I did"
 >
-  <main class="flex min-h-[80vh] flex-auto flex-col" transition:animate="slide">
+  <main class="flex w-full min-h-[80vh] flex-auto flex-col" transition:animate="slide">
     <TopLayout>
       <h2 class="scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0">
         {PROJECTSTEXTS.TITLE}
@@ -22,7 +22,7 @@ import ProjectCard from '../components/ProjectCard.astro'
       </p>
     </TopLayout>
     <BottomLayout>
-      <div class="flex w-full flex-wrap justify-center gap-2">
+      <div class="flex w-full flex-wrap justify-center gap-4">
         {
           PROJECTS.map((project: any) => (
             <ProjectCard
