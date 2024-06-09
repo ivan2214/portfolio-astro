@@ -38,11 +38,13 @@ export type Networks = {
 }[]
 
 export interface Project {
+  id: number
   hrefWeb?:  string
   hrefRepo?: string
-  imagePath: string
-  altText: string
+  image: string
+  alt: string
   heading: string
-  subheading?: string
+  type?: string
   tags?: string[]
+  description?: string
 }

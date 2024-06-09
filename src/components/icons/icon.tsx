@@ -19,6 +19,7 @@ import {
   Fa6BrandsXTwitter,
   Fa6BrandsGithub,
   MdiGmail,
+  PepiconsPencilInternet,
 } from '@components/icons/icons-svg'
 
 export const Icons: Record<
@@ -45,13 +46,36 @@ export const Icons: Record<
   x: Fa6BrandsXTwitter,
   github: Fa6BrandsGithub,
   gmail: MdiGmail,
+  internet: PepiconsPencilInternet,
 }
+
+type IconName =
+  | 'javascript'
+  | 'typescript'
+  | 'react'
+  | 'nextjs'
+  | 'vite'
+  | 'astro'
+  | 'tailwind'
+  | 'shadcn'
+  | 'express'
+  | 'nestjs'
+  | 'docker'
+  | 'prisma'
+  | 'git'
+  | 'discord'
+  | 'linkedin'
+  | 'x'
+  | 'github'
+  | 'gmail'
+  | 'google'
+  | 'internet'
 
 export const Icon = ({
   name,
   className,
 }: {
-  name: string
+  name: IconName
   className?: HTMLDivElement['className']
 }) => {
   const isValidName = name in Icons

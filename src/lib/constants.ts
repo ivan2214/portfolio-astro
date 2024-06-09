@@ -58,24 +58,90 @@ export const PROJECTSTEXTS: Page = {
 
 export const PROJECTS: Project[] = [
   {
-    altText: 'Portfolio',
-    heading: 'Portfolio',
-    imagePath: '/img/projects/portfolio.png',
-    subheading: 'Personal portfolio',
-    tags: ['React', 'Tailwind', 'Astro'],
-    hrefRepo: 'https://github.com/ivan2214/portfolio-astro',
+    id: 1,
+    heading: 'Gestion de turnos',
+    image: '/img/projects/gestion-turnos.png',
+    alt: 'Captura de pantalla de la página de inicio de la aplicación',
+    type: 'Dashboard',
+    tags: [
+      'NextJs',
+      'Tailwind',
+      'ShadcnUi',
+      'TypeScript',
+      'Postgres',
+      'Prisma',
+      'Docker',
+    ],
+    hrefRepo: 'https://github.com/ivan2214/Turnos-medicos',
+    description:
+      'Desarrolle un sistema de gestión de turnos para un consultorio medico.El cual permite gestionar pacientes, citas, usuarios, etc.',
   },
   {
-    altText: 'Portfolio',
-    heading: 'Portfolio',
-    imagePath: '/img/projects/portfolio.png',
-    subheading: 'Personal portfolio',
+    id: 2,
+    heading: 'Panel administración de distintas tiendas',
+    image: '/img/projects/Dashboard-Next-Clerk-Prisma.png',
+    alt: 'Captura de pantalla de la página de inicio de la aplicación',
+    type: 'Dashboard',
     tags: ['React', 'Tailwind', 'Astro'],
-    hrefRepo: 'https://github.com/ivan2214/portfolio-astro',
+    hrefRepo: 'https://github.com/ivan2214/dashboard-next-clerk-prisma',
+    description:
+      'Administración de distintas tiendas. Con el uso de Next, Clerk y Prisma. Con funcionalidades como gestión de usuarios, productos, categorías, etc.',
+  },
+  {
+    id: 3,
+    heading: 'Landing page de la marca Bardahl en Chile',
+    image: '/img/projects/bardahl-chile.png',
+    alt: 'Captura de pantalla de la página de inicio de la aplicación',
+    type: 'Landing Page',
+    tags: ['NextJs', 'Tailwind', 'TypeScript', 'Zustand'],
+    hrefRepo: 'https://github.com/ivan2214/Bardahl-Chile',
+    description:
+      'Landing page de la marca  Cardinal. Con el uso de Next, Clerk y Prisma. Con funcionalidades como gestión de usuarios, productos, categorías, etc.',
+    hrefWeb: 'https://bardahl-chile.vercel.app',
+  },
+  {
+    id: 4,
+    heading: 'Landing page de la marca Bardahl en Bolivia',
+    image: '/img/projects/bardahl.png',
+    alt: 'Captura de pantalla de la página de inicio de la aplicación',
+    type: 'Landing Page',
+    tags: ['NextJs', 'Tailwind', 'TypeScript', 'Zustand'],
+    hrefRepo: 'https://github.com/ivan2214/Bardhal-Bolivia',
+    description:
+      'Landing page de la marca  Cardinal. Con el uso de Next, Clerk y Prisma. Con funcionalidades como gestión de usuarios, productos, categorías, etc.',
+    hrefWeb: 'https://bardahl.vercel.app',
+  },
+  {
+    id: 5,
+    heading: 'Landing page Web Genius',
+    image: '/img/projects/web-genius.png',
+    alt: 'Captura de pantalla de la página de inicio de la aplicación',
+    type: 'Landing Page',
+    tags: ['Astro', 'Tailwind', 'TypeScript'],
+    hrefRepo: 'https://github.com/ivan2214/web-genius',
+    hrefWeb: 'https://web-genius.vercel.app',
+  },
+  {
+    id: 6,
+    heading: 'Airbnb Clone',
+    image: '/img/projects/airbnb.png',
+    alt: 'Captura de pantalla de la página de inicio de la aplicación',
+    type: 'Clone',
+    tags: [
+      'Nextjs',
+      'Tailwind',
+      'TypeScript',
+      'Prisma',
+      'Mongodb',
+      'Vercel',
+      'Zustand',
+    ],
+    hrefRepo: 'https://github.com/ivan2214/airbnb-project',
+    hrefWeb: 'https://airbnb-project-nu.vercel.app',
   },
 ]
 
-// Search 
+// Search
 export const SEARCH: Page = {
   TITLE: 'Buscar',
   DESCRIPTION: 'Busque todas las publicaciones y proyectos por palabra clave.',
@@ -144,7 +210,7 @@ export const EXPERIENCE: Experience[] = [
       'Testing and debugging',
     ],
   },
- /*  {
+  /*  {
     company: 'Imaginamos',
     link: 'https://imaginamos.com/',
     location: 'Bogotá D C, Colombia',
