@@ -26,10 +26,13 @@ import { Image } from 'astro:assets'
               href={network.link}
               aria-label={`${network.network === 'gmail' ? 'Enviar' : 'Ir a'} ${network.network}`}
               target="_blank"
+              rel="noopener noreferrer"
+              title={`${network.network === 'gmail' ? 'Enviar' : 'Ir a'} ${network.network}`}
             >
               <Button
                 title={`${network.network === 'gmail' ? 'Enviar' : 'Ir a'} ${network.network}`}
                 variant="outline"
+                aria-label={`${network.network === 'gmail' ? 'Enviar' : 'Ir a'} ${network.network}`}
               >
                 <Icon className="h-5 w-5" name={network.network} />
                 <span class="sr-only">Perfil de {network.network}</span>
@@ -43,9 +46,12 @@ import { Image } from 'astro:assets'
       src="/img/bitmoji/waving.png"
       width="300"
       height="300"
-      loading="lazy"
+      loading="eager"
       class="pointer-events-none absolute bottom-[-20px] right-[-110px] z-[-1] max-h-[300px] w-auto select-none opacity-50 md:relative md:bottom-auto md:right-auto md:z-auto md:opacity-100"
       alt="memoji of Ivan Bongiovanni"
+      title="memoji of Ivan Bongiovanni"
+      format="png"
+      
     />
   </div>
 </Card>
