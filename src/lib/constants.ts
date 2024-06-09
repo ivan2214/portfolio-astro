@@ -60,7 +60,7 @@ export const PROJECTS: Project[] = [
   {
     altText: 'Portfolio',
     heading: 'Portfolio',
-    imagePath: '/images/portfolio.png',
+    imagePath: '/img/projects/portfolio.png',
     subheading: 'Personal portfolio',
     tags: ['React', 'Tailwind', 'Astro'],
     hrefRepo: 'https://github.com/ivan2214/portfolio-astro',
@@ -68,7 +68,7 @@ export const PROJECTS: Project[] = [
   {
     altText: 'Portfolio',
     heading: 'Portfolio',
-    imagePath: '/images/portfolio.png',
+    imagePath: '/img/projects/portfolio.png',
     subheading: 'Personal portfolio',
     tags: ['React', 'Tailwind', 'Astro'],
     hrefRepo: 'https://github.com/ivan2214/portfolio-astro',
