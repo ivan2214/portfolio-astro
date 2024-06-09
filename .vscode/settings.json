@@ -12,6 +12,7 @@
     "components",
     "lib",
     "sections",
-    "constants"
+    "constants",
+    "src"
   ]
 }
