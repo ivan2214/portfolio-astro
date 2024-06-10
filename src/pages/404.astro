@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 
 import { buttonVariants } from '../components/ui/button'
 import { Image } from 'astro:assets'
+import bitmojiWaving from '@/assets/img/bitmoji/waving.png'
 ---
 
 <BaseLayout
@@ -12,9 +13,10 @@ import { Image } from 'astro:assets'
   <main class="flex h-[80vh] flex-auto">
     <div class="flex flex-col items-center justify-center px-8">
       <Image
-        width="64"
-        height="64"
-        src="/img/bitmoji/waving.png"
+        src={bitmojiWaving}
+        width={bitmojiWaving.width}
+        height={bitmojiWaving.height}
+        format={bitmojiWaving.format}
         alt="404"
         class="mb-8 size-64"
       />
