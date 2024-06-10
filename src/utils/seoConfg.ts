@@ -9,7 +9,7 @@ export const seoConfig = {
     'Web Oficial de Iván Bongiovanni desarrollador de software y mirador serial de series con fuerte enfoque en la experiencia del usuario, animaciones y micro interacciones.',
   type: 'website',
   image: {
-    url: 'https://ivanbong.vercel.app/home.png',
+    url: 'https://ivanbong.vercel.app/home.webp',
     alt: '',
     width: 705,
     height: 606,

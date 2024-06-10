@@ -1,8 +1,8 @@
 ---
 import '@/styles/globals.css'
 import '@/styles/fonts.css'
-import bitmojiWaving from '@/assets/img/bitmoji/waving.png'
-import bitmojiSurprisedPhone from '@/assets/img/bitmoji/surprised-phone.png'
+import bitmojiWaving from '@/assets/img/bitmoji/waving.webp'
+import bitmojiSurprisedPhone from '@/assets/img/bitmoji/surprised-phone.webp'
 
 interface Props {
   title?: string | undefined
@@ -13,10 +13,10 @@ interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
 if (Astro.props.ogImage === undefined) {
-  Astro.props.ogImage = new URL('home.png', canonicalURL)
+  Astro.props.ogImage = new URL('home.webp', canonicalURL)
 }
 
-const { title, description, ogImage = '/home.png' } = Astro.props
+const { title, description, ogImage = '/home.webp' } = Astro.props
 ---
 
 <meta charset="utf-8" />
