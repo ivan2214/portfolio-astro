@@ -13,6 +13,7 @@
     "lib",
     "sections",
     "constants",
-    "src"
+    "src",
+    "dependencies"
   ]
 }
