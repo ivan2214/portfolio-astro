@@ -6,7 +6,7 @@ import type { HtmlHTMLAttributes } from 'react'
 import { Badge } from './ui/badge'
 import { cn } from '@/lib/utils'
 import { Button } from './ui/button'
-import { GithubIcon, SquareArrowOutUpRightIcon } from 'lucide-react'
+import { SquareArrowOutUpRightIcon } from 'lucide-react'
 import { Icon } from './icons/icon'
 
 interface Props extends Project {
@@ -23,8 +23,6 @@ const {
   image,
   alt,
 }: Props = Astro.props
-
-const href = hrefRepo || hrefWeb
 ---
 
 <article class={cn(className)}>
@@ -32,8 +30,9 @@ const href = hrefRepo || hrefWeb
     <Image
       src={image}
       alt={alt}
-      width={500}
-      height={300}
+      width={image.width}
+      height={image.height}
+      format={image.format}
       class="h-48 w-full rounded-2xl rounded-bl-none rounded-br-none object-cover"
       loading="eager"
     />

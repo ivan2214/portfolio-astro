@@ -4,6 +4,7 @@ import { Button } from '@ui/button'
 import { NETWORKS } from '@lib/constants'
 import { Icon } from '@components/icons/icon'
 import { Image } from 'astro:assets'
+import bitmojiWaving from '@/assets/img/bitmoji/waving.png'
 ---
 
 <Card colSpan="md:col-span-3" rowSpan="md:row-span-4">
@@ -43,15 +44,14 @@ import { Image } from 'astro:assets'
       </div>
     </div>
     <Image
-      src="/img/bitmoji/waving.png"
-      width="300"
-      height="300"
+      src={bitmojiWaving}
+      width={bitmojiWaving.width}
+      height={bitmojiWaving.height}
       loading="eager"
       class="pointer-events-none absolute bottom-[-20px] right-[-110px] z-[-1] max-h-[300px] w-auto select-none opacity-50 md:relative md:bottom-auto md:right-auto md:z-auto md:opacity-100"
       alt="memoji of Ivan Bongiovanni"
       title="memoji of Ivan Bongiovanni"
-      format="png"
-      
+      format={bitmojiWaving.format}
     />
   </div>
 </Card>

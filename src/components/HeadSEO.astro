@@ -1,6 +1,8 @@
 ---
 import '@/styles/globals.css'
 import '@/styles/fonts.css'
+import bitmojiWaving from '@/assets/img/bitmoji/waving.png'
+import bitmojiSurprisedPhone from '@/assets/img/bitmoji/surprised-phone.png'
 
 interface Props {
   title?: string | undefined
@@ -23,8 +25,8 @@ const { title, description, ogImage } = Astro.props
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="generator" content={Astro.generator} />
 <!-- Cargar todas las fotos del inicio en public primero -->
-<link rel="preload" as="image" href="/img/bitmoji/waving.png" />
-<link rel="preload" as="image" href="/img/bitmoji/surprised-phone.png" />
+<link rel="preload" as="image" href={bitmojiWaving.src} />
+<link rel="preload" as="image" href={bitmojiSurprisedPhone.src} />
 
 <link rel="canonical" href={canonicalURL} />
 <link
@@ -60,4 +62,3 @@ const { title, description, ogImage } = Astro.props
 <link rel="apple-touch-icon" href="/img/icons/apple-touch-icon.png" />
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-

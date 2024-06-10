@@ -1,4 +1,10 @@
 import type { Site, Page, Study, Experience, Networks, Project } from './types'
+import gestionTurnos from  "@/assets/img/projects/gestion-turnos.png"
+import panelAdmin from  "@/assets/img/projects/Dashboard-Next-Clerk-Prisma.png"
+import bardahlChile from  "@/assets/img/projects/bardahl-chile.png"
+import bardahlBolivia from  "@/assets/img/projects/bardahl.png"
+import webGenius from  "@/assets/img/projects/web-genius.png"
+import airbnb from  "@/assets/img/projects/airbnb.png"
 
 export const loaderAnimation = [
   '.loader',
@@ -60,7 +66,7 @@ export const PROJECTS: Project[] = [
   {
     id: 1,
     heading: 'Gestion de turnos',
-    image: '/img/projects/gestion-turnos.png',
+    image: gestionTurnos,
     alt: 'Captura de pantalla de la página de inicio de la aplicación',
     type: 'Dashboard',
     tags: [
@@ -79,7 +85,7 @@ export const PROJECTS: Project[] = [
   {
     id: 2,
     heading: 'Panel administración de distintas tiendas',
-    image: '/img/projects/Dashboard-Next-Clerk-Prisma.png',
+    image: panelAdmin,
     alt: 'Captura de pantalla de la página de inicio de la aplicación',
     type: 'Dashboard',
     tags: ['React', 'Tailwind', 'Astro'],
@@ -90,7 +96,7 @@ export const PROJECTS: Project[] = [
   {
     id: 3,
     heading: 'Landing page de la marca Bardahl en Chile',
-    image: '/img/projects/bardahl-chile.png',
+    image: bardahlChile,
     alt: 'Captura de pantalla de la página de inicio de la aplicación',
     type: 'Landing Page',
     tags: ['NextJs', 'Tailwind', 'TypeScript', 'Zustand'],
@@ -102,7 +108,7 @@ export const PROJECTS: Project[] = [
   {
     id: 4,
     heading: 'Landing page de la marca Bardahl en Bolivia',
-    image: '/img/projects/bardahl.png',
+    image: bardahlBolivia,
     alt: 'Captura de pantalla de la página de inicio de la aplicación',
     type: 'Landing Page',
     tags: ['NextJs', 'Tailwind', 'TypeScript', 'Zustand'],
@@ -114,7 +120,7 @@ export const PROJECTS: Project[] = [
   {
     id: 5,
     heading: 'Landing page Web Genius',
-    image: '/img/projects/web-genius.png',
+    image: webGenius,
     alt: 'Captura de pantalla de la página de inicio de la aplicación',
     type: 'Landing Page',
     tags: ['Astro', 'Tailwind', 'TypeScript'],
@@ -124,7 +130,7 @@ export const PROJECTS: Project[] = [
   {
     id: 6,
     heading: 'Airbnb Clone',
-    image: '/img/projects/airbnb.png',
+    image: airbnb,
     alt: 'Captura de pantalla de la página de inicio de la aplicación',
     type: 'Clone',
     tags: [
