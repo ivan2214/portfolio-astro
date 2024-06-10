@@ -35,11 +35,11 @@ import { EXPERIENCE } from '../lib/constants'
                 <p class="font-semibold text-primary">{entry.company}</p>
               )}
               <div class="text-sm font-semibold">{entry.position}</div>
-              <article class="prose dark:prose-invert">
+              <ul class="mt-2">
                 {entry.tasks.map((i) => (
-                  <>{i}</>
+                  <li>- {i}.</li>
                 ))}
-              </article>
+              </ul>
             </li>
           ))
         }
