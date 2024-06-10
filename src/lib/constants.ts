@@ -2,7 +2,7 @@ import type { Site, Page, Study, Experience, Networks, Project } from './types'
 import gestionTurnos from  "@/assets/img/projects/gestion-turnos.webp"
 import panelAdmin from  "@/assets/img/projects/Dashboard-Next-Clerk-Prisma.webp"
 import bardahlChile from  "@/assets/img/projects/bardahl-chile.webp"
-import bardahlBolivia from  "@/assets/img/projects/bardahl.webp"
+import bardahlBolivia from  "@/assets/img/projects/bardahl-bolivia.webp"
 import webGenius from  "@/assets/img/projects/web-genius.webp"
 import airbnb from  "@/assets/img/projects/airbnb.webp"
 
