@@ -15,6 +15,7 @@
     "constants",
     "src",
     "dependencies",
-    "assets"
+    "assets",
+    "images"
   ]
 }
