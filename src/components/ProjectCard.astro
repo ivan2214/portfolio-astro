@@ -30,8 +30,9 @@ const {
     <Image
       src={image}
       alt={alt}
-      width={500}
-      height={300}
+      width={image.width}
+      height={image.height}
+      format={image.format}
       class="h-48 w-full rounded-2xl rounded-bl-none rounded-br-none object-cover"
       loading="eager"
     />

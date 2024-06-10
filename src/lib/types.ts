@@ -43,7 +43,7 @@ export interface Project {
   id: number
   hrefWeb?:  string
   hrefRepo?: string
-  image: string
+  image: ImageMetadata
   alt: string
   heading: string
   type?: string
