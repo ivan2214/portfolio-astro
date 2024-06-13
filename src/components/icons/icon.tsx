@@ -20,6 +20,8 @@ import {
   Fa6BrandsGithub,
   MdiGmail,
   PepiconsPencilInternet,
+  DeviconVercel,
+  DeviconMongodb,
 } from '@components/icons/icons-svg'
 
 export const Icons: Record<
@@ -39,6 +41,8 @@ export const Icons: Record<
   docker: DeviconDocker,
   prisma: DeviconPrisma,
   git: DeviconGit,
+  mongo: DeviconMongodb,
+  vercel: DeviconVercel,
 
   // ICONS LOGOS
   discord: Fa6BrandsDiscord,
@@ -70,6 +74,9 @@ export type IconName =
   | 'gmail'
   | 'google'
   | 'internet'
+  | 'vercel'
+  | 'mongo'
+  | 'zustand'
 
 export const Icon = ({
   name,

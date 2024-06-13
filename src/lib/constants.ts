@@ -138,7 +138,7 @@ export const PROJECTS: Project[] = [
       'Tailwind',
       'TypeScript',
       'Prisma',
-      'Mongodb',
+      'Mongo',
       'Vercel',
       'Zustand',
     ],
