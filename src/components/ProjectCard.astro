@@ -7,7 +7,8 @@ import { Badge } from './ui/badge'
 import { cn } from '@/lib/utils'
 import { Button } from './ui/button'
 import { SquareArrowOutUpRightIcon } from 'lucide-react'
-import { Icon } from './icons/icon'
+import { Icon, type IconName } from './icons/icon'
+import { Icons } from './icons/icon'
 
 interface Props extends Project {
   class?: HtmlHTMLAttributes<HTMLDivElement>['className']
@@ -42,14 +43,18 @@ const {
       {
         tags?.length && (
           <div class="mt-2 flex flex-wrap gap-2">
-            {tags?.map((tag) => (
-              <Badge
-                className="font-light text-xs leading-tight"
-                variant="outline"
-              >
-                {tag}
-              </Badge>
-            ))}
+            {tags?.map((tag) => {
+              const isValidTag = tag.toLowerCase() in Icons
+              return (
+                <Badge
+                  className="font-light text-xs leading-tight flex items-center gap-x-1"
+                  variant="outline"
+                >
+                  {isValidTag && <Icon name={tag.toLowerCase() as IconName} />}
+                  {tag}
+                </Badge>
+              )
+            })}
           </div>
         )
       }
