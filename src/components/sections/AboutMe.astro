@@ -1,31 +1,43 @@
 ---
 import Card from '../Card.astro'
+import { Icon, type IconName } from '@/components/icons/icon'
+import { Icons } from '@/components/icons/icon'
+
+const techs = [
+  'JavaScript',
+  'TypeScript',
+  'React',
+  'NextJs',
+  'Vite',
+  'Astro',
+  'Tailwind',
+  'Shadcn',
+  'Express',
+  'NestJs',
+  'Docker',
+  'Prisma',
+]
 ---
 
 <Card colSpan="md:col-span-1" rowSpan="md:row-span-6" title="Sobre mi">
   <div class="flex flex-col gap-2">
-    <p class="text-sm font-light">
-      Soy Iván, un desarrollador de software fullstack de Tucumán, Argentina.
-      <br />
-      <br />
+    <p class="mt-1 text-sm font-light">
       Mis tecnologías favoritas son:
-      <ul class="list-inside list-disc">
-        <li>JavaScript</li>
-        <li>TypeScript</li>
-        <li>React</li>
-        <li>NextJs</li>
-        <li>Vite</li>
-        <li>Astro</li>
-        <li>Tailwind</li>
-        <li>Shadcn</li>
-        <li>Express</li>
-        <li>NestJs</li>
-        <li>Docker</li>
-        <li>PrismaOrm</li>
-        <li>Git</li>
+      <ul class="list-inside text-sm font-extralight flex flex-col gap-y-1">
+        {
+          techs.map((tech) => {
+            const isValidTag = tech.toLowerCase() in Icons
+            return (
+              <li class="flex items-center gap-x-2 text-sm">
+                {isValidTag && <Icon className="h-4 w-4" name={tech.toLowerCase() as IconName} />}
+                {tech}
+              </li>
+            )
+          })
+        }
       </ul>
     </p>
-    <p class="text-sm font-light">
+    <p class="text-sm font-extralight">
       Además de programar, me encanta relajarme viendo series y escuchando al
       grandioso Luis Miguel. También disfruto pasar tiempo con amigos, ya sea
       entrenando juntos en el gimnasio o simplemente charlando.
