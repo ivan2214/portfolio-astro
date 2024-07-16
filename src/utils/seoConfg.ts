@@ -6,7 +6,7 @@
 export const seoConfig = {
   baseURL: 'https://ivanbong.vercel.app', // Production URL.
   description:
-    'Web Oficial de Iván Bongiovanni desarrollador de software y mirador serial de series con fuerte enfoque en la experiencia del usuario, animaciones y micro interacciones.',
+    'Web Oficial de Iván Bongiovanni desarrollador fullstack. En este sitio encontrarás todos los proyectos, estudios, tecnologías y experiencias de Iván.',
   type: 'website',
   image: {
     url: 'https://ivanbong.vercel.app/home.webp',
@@ -14,7 +14,7 @@ export const seoConfig = {
     width: 705,
     height: 606,
   },
-  siteName: 'La Velada',
+  siteName: 'Ivan Bongiovanni Portfolio',
   twitter: {
     card: 'summary_large_image',
   },
