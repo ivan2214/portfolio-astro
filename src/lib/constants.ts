@@ -1,10 +1,10 @@
 import type { Site, Page, Study, Experience, Networks, Project } from './types'
-import gestionTurnos from  "@/assets/img/projects/gestion-turnos.webp"
-import panelAdmin from  "@/assets/img/projects/Dashboard-Next-Clerk-Prisma.webp"
-import bardahlChile from  "@/assets/img/projects/bardahl-chile.webp"
-import bardahlBolivia from  "@/assets/img/projects/bardahl-bolivia.webp"
-import webGenius from  "@/assets/img/projects/web-genius.webp"
-import airbnb from  "@/assets/img/projects/airbnb.webp"
+import gestionTurnos from '@/assets/img/projects/gestion-turnos.webp'
+import panelAdmin from '@/assets/img/projects/Dashboard-Next-Clerk-Prisma.webp'
+import bardahlChile from '@/assets/img/projects/bardahl-chile.webp'
+import bardahlBolivia from '@/assets/img/projects/bardahl-bolivia.webp'
+import webGenius from '@/assets/img/projects/web-genius.webp'
+import airbnb from '@/assets/img/projects/airbnb.webp'
 
 export const loaderAnimation = [
   '.loader',
@@ -163,14 +163,8 @@ export const STUDIES: Study[] = [
     date: '2022 - Presente',
   },
   {
-    title: 'Full Stack Developer',
-    institution: 'Soy Henry',
-    link: 'https://www.soyhenry.com/',
-    date: '2022 - 2022',
-  },
-  {
     title: 'Autodidacta',
-    institution: 'Youtube',
+    institution: 'Autodidacta online',
     link: 'https://www.youtube.com/@midulive',
     date: 'Presente',
   },
